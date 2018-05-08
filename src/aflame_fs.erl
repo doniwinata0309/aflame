@@ -17,7 +17,7 @@
 
 base_dir() ->
     {ok, Paths} = application:get_env(aflame, paths),
-    proplists:get_value(file:get_cwd(), Paths).
+    proplists:get_value(base_directory, Paths).
 
 temp_dir() ->
     filename:join(base_dir(), ?TEMP_DIR).
