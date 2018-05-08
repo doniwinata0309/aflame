@@ -166,7 +166,8 @@ write_thread(Parser, Profile, OutPath, ThreadId) ->
                   "--title", quote_string(ThreadName),
                   "--hash",
                   "--countname", "microseconds",
-                  binary_to_list(OutFile), ">", binary_to_list(GraphFile)
+                  binary_to_list(OutFile), ">", binary_to_list(GraphFile),
+                   "--inverted"
                  ]
                 ),
     _Ret = os:cmd(GraphCmd),
