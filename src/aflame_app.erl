@@ -6,7 +6,8 @@
 
 start(_StartType, _StartArgs) ->
     aflame_web:start(),
-    aflame_sup:start_link().
+    aflame_sup:start_link(),
+    lager:info("Listening to localhost:4000").
 
 stop(_State) ->
     ok.
